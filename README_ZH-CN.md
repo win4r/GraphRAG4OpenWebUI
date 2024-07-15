@@ -1,3 +1,6 @@
+## 🔥🔥🔥如有问题请联系我的微信 stoeng
+## 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
+
 # GraphRAG4OpenWebUI
 
 <div align="center">
