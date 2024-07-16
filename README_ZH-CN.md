@@ -64,11 +64,27 @@ GraphRAG4OpenWebUI 是一个专为 Open WebUI 设计的 API 接口，旨在集�
 在运行 API 之前，需要设置以下环境变量。您可以通过创建 `.env` 文件或直接在终端中导出这些变量：
 
 ```bash
-export GRAPHRAG_API_KEY="your_graphrag_api_key"
 export TAVILY_API_KEY="your_tavily_api_key"
-export GRAPHRAG_LLM_MODEL="gpt-3.5-turbo"
-export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
+
 export INPUT_DIR="/path/to/your/input/directory"
+
+# 设置llm API密钥
+export GRAPHRAG_API_KEY="your_actual_api_key_here"
+
+# 设置嵌入API密钥（如果与GRAPHRAG_API_KEY不同）
+export GRAPHRAG_API_KEY_EMBEDDING="your_embedding_api_key_here"
+
+# 设置LLM模型（默认为"gemma2"）
+export GRAPHRAG_LLM_MODEL="gemma2"
+
+# 设置API基础URL（默认为本地服务器）
+export API_BASE="http://localhost:11434/v1"
+
+# 设置嵌入API基础URL（默认为OpenAI的API）
+export API_BASE_EMBEDDING="https://api.openai.com/v1"
+
+# 设置嵌入模型（默认为"text-embedding-3-small"）
+export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
 ```
 
 请确保将上述命令中的占位符替换为实际的 API 密钥和路径。
