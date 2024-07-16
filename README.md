@@ -54,8 +54,22 @@ GraphRAG4OpenWebUI now supports the use of local language models (LLMs) and embe
 This support for local models allows GraphRAG4OpenWebUI to run without relying on external APIs, enhancing data privacy and reducing usage costs.
 
 ## Installation
-
-[Installation instructions remain unchanged]
+Ensure that you have Python 3.8 or higher installed on your system. Then, follow these steps to install:
+1. Clone the repository:
+   
+   git clone https://github.com/your-username/GraphRAG4OpenWebUI.git
+   cd GraphRAG4OpenWebUI
+   
+2. Create and activate a virtual environment:
+   
+   python -m venv venv
+   source venv/bin/activate  # On Windows use venv\Scripts\activate
+   
+3. Install dependencies:
+   
+   pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
+   
+   Note: The graphrag package might need to be installed from a specific source. If the above command fails to install graphrag, please refer to Microsoft Research's specific instructions or contact the maintainer for the correct installation method.
 
 ## Configuration
 
