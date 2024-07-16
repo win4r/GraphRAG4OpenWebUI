@@ -63,11 +63,28 @@ Ensure that you have Python 3.8 or higher installed on your system. Then, follow
 Before running the API, you need to set the following environment variables. You can do this by creating a `.env` file or exporting them directly in your terminal:
 
 ```bash
-export GRAPHRAG_API_KEY="your_graphrag_api_key"
+# Set the TAVILY API key 
 export TAVILY_API_KEY="your_tavily_api_key"
-export GRAPHRAG_LLM_MODEL="gpt-3.5-turbo"
-export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
+
 export INPUT_DIR="/path/to/your/input/directory"
+
+# Set the API key for LLM
+export GRAPHRAG_API_KEY="your_actual_api_key_here"
+
+# Set the API key for embedding (if different from GRAPHRAG_API_KEY)
+export GRAPHRAG_API_KEY_EMBEDDING="your_embedding_api_key_here"
+
+# Set the LLM model 
+export GRAPHRAG_LLM_MODEL="gemma2"
+
+# Set the API base URL 
+export API_BASE="http://localhost:11434/v1"
+
+# Set the embedding API base URL (default is OpenAI's API)
+export API_BASE_EMBEDDING="https://api.openai.com/v1"
+
+# Set the embedding model (default is "text-embedding-3-small")
+export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
 ```
 
 Make sure to replace the placeholders in the above commands with your actual API keys and paths.
