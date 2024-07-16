@@ -110,7 +110,7 @@ Make sure to replace the placeholders in the above commands with your actual API
 
 1. Start the server:
    ```
-   python main.py
+   python main-en.py
    ```
    The server will run on `http://localhost:8012`.
 
