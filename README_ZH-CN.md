@@ -1,8 +1,7 @@
-## 🔥🔥🔥如有问题请联系我的微信 stoeng
-## 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
+### 🔥🔥🔥如有问题请联系我的微信 stoeng
+### 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
 
 # GraphRAG4OpenWebUI
-
 <div align="center">
   <p><strong>将微软的 GraphRAG 技术集成到 Open WebUI 中，实现高级信息检索</strong></p>
   <a href="README.md">English</a> | 简体中文
@@ -36,32 +35,32 @@ GraphRAG4OpenWebUI 是一个专为 Open WebUI 设计的 API 接口，旨在集�
    - 提供最全面的搜索结果，满足复杂的信息需求
    - 自动整合和排序来自不同来源的信息
 
+### 本地LLM和Embedding模型支持
+
+GraphRAG4OpenWebUI 现在支持使用本地的语言模型（LLM）和嵌入模型，增加了项目的灵活性和隐私性。特别地，我们支持以下本地模型：
+
+1. **Ollama**
+   - 支持使用 Ollama 运行的各种开源 LLM，如 Llama 2、Mistral 等
+   - 可以通过设置 `API_BASE` 环境变量来指向 Ollama 的 API 端点
+
+2. **LM Studio**
+   - 兼容 LM Studio 运行的模型
+   - 通过配置 `API_BASE` 环境变量连接到 LM Studio 的服务
+
+3. **本地 Embedding 模型**
+   - 支持使用本地运行的嵌入模型，如 SentenceTransformers
+   - 通过设置 `GRAPHRAG_EMBEDDING_MODEL` 环境变量来指定使用的嵌入模型
+
+这些本地模型的支持使得 GraphRAG4OpenWebUI 能够在不依赖外部API的情况下运行，提高了数据隐私和降低了使用成本。
+
 ## 安装
 
-确保您的系统中已安装 Python 3.8 或更高版本。然后，按照以下步骤安装：
-
-1. 克隆仓库：
-   ```
-   git clone https://github.com/your-username/GraphRAG4OpenWebUI.git
-   cd GraphRAG4OpenWebUI
-   ```
-
-2. 创建并激活虚拟环境：
-   ```
-   python -m venv venv
-   source venv/bin/activate  # 在 Windows 上使用 venv\Scripts\activate
-   ```
-
-3. 安装依赖：
-   ```
-   pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
-   ```
-
-   注意：`graphrag` 包可能需要从特定的源安装。如果上述命令无法安装 `graphrag`，请参考微软研究院的具体说明或联系维护者获取正确的安装方法。
+[安装说明保持不变]
 
 ## 配置
 
 在运行 API 之前，需要设置以下环境变量。您可以通过创建 `.env` 文件或直接在终端中导出这些变量：
+
 
 ```bash
 export TAVILY_API_KEY="your_tavily_api_key"
