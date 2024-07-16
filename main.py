@@ -14,6 +14,7 @@ from typing import List, Optional, Dict, Any, Union
 from contextlib import asynccontextmanager
 from tavily import TavilyClient
 
+
 # GraphRAG 相关导入
 from graphrag.query.context_builder.entity_extraction import EntityVectorStoreKey
 from graphrag.query.indexer_adapters import (
@@ -104,31 +105,44 @@ async def setup_llm_and_embedder():
     设置语言模型（LLM）和嵌入模型
     """
     logger.info("正在设置LLM和嵌入器")
-    api_key = os.environ.get("GRAPHRAG_API_KEY")
-    if not api_key:
-        logger.error("环境变量中未找到GRAPHRAG_API_KEY")
-        raise ValueError("GRAPHRAG_API_KEY未设置")
 
-    llm_model = os.environ.get("GRAPHRAG_LLM_MODEL", "gpt-3.5-turbo")
+    # 获取API密钥和基础URL
+    api_key = os.environ.get("GRAPHRAG_API_KEY", "YOUR_API_KEY")
+    api_key_embedding = os.environ.get("GRAPHRAG_API_KEY_EMBEDDING", api_key)
+    api_base = os.environ.get("API_BASE", "https://api.openai.com/v1")
+    api_base_embedding = os.environ.get("API_BASE_EMBEDDING", "https://api.openai.com/v1")
+
+    # 获取模型名称
+    llm_model = os.environ.get("GRAPHRAG_LLM_MODEL", "gpt-3.5-turbo-0125")
     embedding_model = os.environ.get("GRAPHRAG_EMBEDDING_MODEL", "text-embedding-3-small")
 
+    # 检查API密钥是否存在
+    if api_key == "YOUR_API_KEY":
+        logger.error("环境变量中未找到有效的GRAPHRAG_API_KEY")
+        raise ValueError("GRAPHRAG_API_KEY未正确设置")
+
+    # 初始化ChatOpenAI实例
     llm = ChatOpenAI(
         api_key=api_key,
+        api_base=api_base,
         model=llm_model,
         api_type=OpenaiApiType.OpenAI,
         max_retries=20,
     )
 
+    # 初始化token编码器
     token_encoder = tiktoken.get_encoding("cl100k_base")
 
+    # 初始化文本嵌入模型
     text_embedder = OpenAIEmbedding(
-        api_key=api_key,
-        api_base=None,
+        api_key=api_key_embedding,
+        api_base=api_base_embedding,
         api_type=OpenaiApiType.OpenAI,
         model=embedding_model,
         deployment_name=embedding_model,
         max_retries=20,
     )
+
 
     logger.info("LLM和嵌入器设置完成")
     return llm, token_encoder, text_embedder
