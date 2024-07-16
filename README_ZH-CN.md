@@ -69,7 +69,7 @@ GraphRAG4OpenWebUI 现在支持使用本地的语言模型（LLM）和嵌入模�
    
 3. 安装依赖：
    ```bash
-   pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
+   pip install -r requirements.txt
    ```
    注意：graphrag 包可能需要从特定的源安装。如果上述命令无法安装 graphrag，请参考微软研究院的具体说明或联系维护者获取正确的安装方法。
 
