@@ -1,8 +1,7 @@
 ### 🔥🔥🔥如有问题请联系我的微信 stoeng
 ### 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
 
-当然，我可以为您的英文版README添加关于支持Ollama、LM Studio等本地LLM模型和embedding模型的说明。以下是修改后的英文README部分：
-markdownCopy# GraphRAG4OpenWebUI
+# GraphRAG4OpenWebUI
 <div align="center">
   <p><strong>Integrate Microsoft's GraphRAG Technology into Open WebUI for Advanced Information Retrieval</strong></p>
   English | <a href="README_ZH-CN.md">简体中文</a>
