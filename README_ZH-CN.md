@@ -56,19 +56,21 @@ GraphRAG4OpenWebUI 现在支持使用本地的语言模型（LLM）和嵌入模�
 ## 安装
 确保您的系统中已安装 Python 3.8 或更高版本。然后，按照以下步骤安装：
 1. 克隆仓库：
-   
+   ```bash
    git clone https://github.com/your-username/GraphRAG4OpenWebUI.git
    cd GraphRAG4OpenWebUI
+   ```
    
 2. 创建并激活虚拟环境：
-   
+   ```bash
    python -m venv venv
    source venv/bin/activate  # 在 Windows 上使用 venv\Scripts\activate
+   ```
    
 3. 安装依赖：
-   
+   ```bash
    pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
-   
+   ```
    注意：graphrag 包可能需要从特定的源安装。如果上述命令无法安装 graphrag，请参考微软研究院的具体说明或联系维护者获取正确的安装方法。
 
 ## 配置
