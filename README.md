@@ -69,7 +69,7 @@ Ensure that you have Python 3.8 or higher installed on your system. Then, follow
    
 3. Install dependencies:
    ```bash
-   pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
+   pip install -r requirements.txt
    ```
    Note: The graphrag package might need to be installed from a specific source. If the above command fails to install graphrag, please refer to Microsoft Research's specific instructions or contact the maintainer for the correct installation method.
 
