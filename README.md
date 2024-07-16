@@ -1,7 +1,8 @@
-## 🔥🔥🔥如有问题请联系我的微信 stoeng
-## 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
-# GraphRAG4OpenWebUI
+### 🔥🔥🔥如有问题请联系我的微信 stoeng
+### 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
 
+当然，我可以为您的英文版README添加关于支持Ollama、LM Studio等本地LLM模型和embedding模型的说明。以下是修改后的英文README部分：
+markdownCopy# GraphRAG4OpenWebUI
 <div align="center">
   <p><strong>Integrate Microsoft's GraphRAG Technology into Open WebUI for Advanced Information Retrieval</strong></p>
   English | <a href="README_ZH-CN.md">简体中文</a>
@@ -35,32 +36,33 @@ The main goal of this project is to provide a convenient interface for Open WebU
    - Provides the most comprehensive search results, meeting complex information needs
    - Automatically integrates and ranks information from different sources
 
+### Local LLM and Embedding Model Support
+
+GraphRAG4OpenWebUI now supports the use of local language models (LLMs) and embedding models, increasing the project's flexibility and privacy. Specifically, we support the following local models:
+
+1. **Ollama**
+   - Supports various open-source LLMs run through Ollama, such as Llama 2, Mistral, etc.
+   - Can be configured by setting the `API_BASE` environment variable to point to Ollama's API endpoint
+
+2. **LM Studio**
+   - Compatible with models run by LM Studio
+   - Connect to LM Studio's service by configuring the `API_BASE` environment variable
+
+3. **Local Embedding Models**
+   - Supports the use of locally run embedding models, such as SentenceTransformers
+   - Specify the embedding model to use by setting the `GRAPHRAG_EMBEDDING_MODEL` environment variable
+
+This support for local models allows GraphRAG4OpenWebUI to run without relying on external APIs, enhancing data privacy and reducing usage costs.
+
 ## Installation
 
-Ensure that you have Python 3.8 or higher installed on your system. Then, follow these steps to install:
-
-1. Clone the repository:
-   ```
-   git clone https://github.com/your-username/GraphRAG4OpenWebUI.git
-   cd GraphRAG4OpenWebUI
-   ```
-
-2. Create and activate a virtual environment:
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows use venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```
-   pip install fastapi uvicorn pandas tiktoken graphrag tavily-python pydantic python-dotenv asyncio aiohttp numpy scikit-learn matplotlib seaborn nltk spacy transformers torch torchvision torchaudio
-   ```
-
-   Note: The `graphrag` package might need to be installed from a specific source. If the above command fails to install `graphrag`, please refer to Microsoft Research's specific instructions or contact the maintainer for the correct installation method.
+[Installation instructions remain unchanged]
 
 ## Configuration
 
 Before running the API, you need to set the following environment variables. You can do this by creating a `.env` file or exporting them directly in your terminal:
+
+
 
 ```bash
 # Set the TAVILY API key 
