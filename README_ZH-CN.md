@@ -108,7 +108,7 @@ export GRAPHRAG_EMBEDDING_MODEL="text-embedding-3-small"
 
 1. 启动服务器：
    ```
-   python main.py
+   python main-cn.py
    ```
    服务器将在 `http://localhost:8012` 上运行。
 
