@@ -420,7 +420,7 @@ async def chat_completions(request: ChatCompletionRequest):
                         "choices": [
                             {
                                 "index": 0,
-                                "delta": {"content": line + '\n'} if i > 0 else {"role": "assistant", "content": ""},
+                                "delta": {"content": line + '\n'}, # if i > 0 else {"role": "assistant", "content": ""},
                                 "finish_reason": None
                             }
                         ]
