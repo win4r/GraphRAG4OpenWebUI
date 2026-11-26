@@ -1,7 +1,6 @@
 # [🚀观看我的哔哩哔哩视频](https://www.bilibili.com/video/BV1gPkCYEENe/)
 
 ### 🔥🔥🔥如有问题请联系我的微信 stoeng
-### 🔥🔥🔥项目对应的视频演示请看 https://youtu.be/z4Si6O5NQ4c
 
 # GraphRAG4OpenWebUI
 <div align="center">
